@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  sql:
+    image: mcr.microsoft.com/azure-sql-edge
+    container_name: sql
+    environment:
+      - ACCEPT_EULA=1
+      - MSSQL_SA_PASSWORD=Password123
+      - MSSQL_PID=Developer
+      - MSSQL_USER=SA
+    ports:
+      - "1433:1433"
+    networks:
+      - frontend
+    volumes:
+      - ./frontend-Full.bak:/var/opt/mssql/backup/frontend.bak
+
+networks:
+  frontend:

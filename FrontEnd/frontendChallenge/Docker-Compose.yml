@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  angular16:
+    tty: true
+    image: angular16:latest
+    container_name: frontendangular16
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/app/
+    networks:
+      - frontend
+
+networks:
+  frontend:
+    external: true

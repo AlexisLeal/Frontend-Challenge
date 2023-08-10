@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\blogers.Domain\blogers.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Contracts\" />
+    <None Remove="Contracts\Persitence\" />
+    <None Remove="Features\" />
+    <None Remove="Features\Auth\" />
+    <None Remove="Features\Bloger\" />
+    <None Remove="Features\Auth\Querrys\" />
+    <None Remove="Features\Auth\Querrys\GetSession\" />
+    <None Remove="Features\Bloger\Command\" />
+    <None Remove="Features\Bloger\Command\AddBloger\" />
+    <None Remove="Mapping\" />
+    <None Remove="Features\Bloger\Querrys\" />
+    <None Remove="Features\Bloger\Querrys\GetAllBlogers\" />
+    <None Remove="Features\Bloger\Querrys\GetBlogerById\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+    <Folder Include="Contracts\Persitence\" />
+    <Folder Include="Features\" />
+    <Folder Include="Features\Auth\" />
+    <Folder Include="Features\Bloger\" />
+    <Folder Include="Features\Auth\Querrys\" />
+    <Folder Include="Features\Auth\Querrys\GetSession\" />
+    <Folder Include="Features\Bloger\Command\" />
+    <Folder Include="Features\Bloger\Command\AddBloger\" />
+    <Folder Include="Mapping\" />
+    <Folder Include="Features\Bloger\Querrys\" />
+    <Folder Include="Features\Bloger\Querrys\GetAllBlogers\" />
+    <Folder Include="Features\Bloger\Querrys\GetBlogerById\" />
+  </ItemGroup>
+</Project>
