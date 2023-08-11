@@ -11,7 +11,6 @@ namespace blogers.Infrastucture
 	{
 		public static IServiceCollection AddInfractuctureServiceRegistracion(this IServiceCollection services, IConfiguration configuraration)
 		{
-			var test = configuraration.GetConnectionString("frontend");
 
             services.AddDbContext<FrontendContext>(c => c.UseSqlServer(configuraration.GetConnectionString("frontend")));
 			services.AddScoped(typeof(IAsycBaseRepository<>), typeof(AsycBaseRepository<>));

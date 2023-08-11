@@ -1,0 +1,31 @@
+<div class="search-bar">
+    <mat-form-field class="search-field">
+      <mat-label>Buscar por nombre o sitio web</mat-label>
+      <input matInput (keyup)="applyFilter($event)">
+    </mat-form-field>
+  </div>
+  
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="website">
+      <mat-header-cell *matHeaderCellDef> Website </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.website}} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="picture">
+      <mat-header-cell *matHeaderCellDef> Picture </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <img [src]="element.picture" alt="Blogger Picture" class="blogger-picture">
+      </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  
+  <button mat-raised-button (click)="addBlogger()">Agregar Blogger</button>
+  

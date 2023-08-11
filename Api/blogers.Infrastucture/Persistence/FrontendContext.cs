@@ -23,6 +23,10 @@ public partial class FrontendContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
+         //   if (!optionsBuilder.IsConfigured)
+           // {
+             //   optionsBuilder.UseSqlServer("Server=localhost,1433;Database=frontend;User ID=SA;Password=Password123;Encrypt=False");
+            //}
 
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)

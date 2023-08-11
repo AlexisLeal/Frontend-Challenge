@@ -1,5 +1,4 @@
 version: '3'
-
 services:
   sql:
     image: mcr.microsoft.com/azure-sql-edge
@@ -14,7 +13,8 @@ services:
     networks:
       - frontend
     volumes:
-      - ./frontend-Full.bak:/var/opt/mssql/backup/frontend.bak
+      - ./frontend-2023811-2-5-15.bak:/var/opt/mssql/backup/frontend-Full.bak
 
 networks:
   frontend:
+      external: true

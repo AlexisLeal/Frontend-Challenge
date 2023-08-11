@@ -26,8 +26,7 @@ export class LoginComponent {
     let data = new UserAuth(this.myForm.get('username')?.value,this.myForm.get('password')?.value)
     this.service.login(data).subscribe(resp =>{
       if(!resp) return;
-      this.router.navigate(["/blogger"]);
-
+      this.router.navigate(["/blogger/All"]);
     });
   }
 
